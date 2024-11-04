@@ -1,0 +1,29 @@
+@if(data && data.length!=0){
+    <div>
+        <button>افزودن</button>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>شناسه</th>
+                <th>عنوان</th>
+                <th>شناسه</th>
+                <th>قیمت</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (item of data; track $index)
+            {
+                <tr>
+                    <td>{{item.id}}</td>
+                    <td>{{item.title}}</td>
+                    <td>{{item.writer}}</td>
+                    <td>{{item.price}}</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+@else {
+    <div>لطفا کمی صبر کنید</div>
+}
